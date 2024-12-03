@@ -1,0 +1,80 @@
+
+
+:root{
+    --color_main:rgb(14 165 233);
+
+}
+
+body{
+    background-color: rgb(41, 37, 36);
+    color: white;
+}
+
+.left-bar-info{
+    width: 25%;
+    position: fixed;
+    left: 0px;
+    float: left;
+}
+
+.right-bar{
+    float: right;
+    width: 65%;
+}
+.main-logo{
+    width: 150px;
+}
+
+.profile-img{
+    width: 250px;
+}
+.bar-tabl{
+    width: 250px;
+}
+.nav-top{
+    height: 50px;
+}
+.vertical-hr {
+    width: 1px; /* Adjust the width as needed */
+    height: 50px; /* Full height of the viewport */
+    background-color: var(--color_main); /* Color of the line */
+    border: none; /* Remove default border */
+    position: absolute;
+    left: 19px;
+    top: 26px;
+    z-index: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color_main); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color_main); 
+  }
+
+#navss{
+    transition: width 10s ease; 
+}
+.bi-copy{
+    
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    background: var(--color_main);
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
