@@ -1,13 +1,19 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Poppins:wght@300;700&display=swap');
 :root{
     --color_main:rgb(14 165 233);
 
 }
 
+
 body{
     background-color: rgb(41, 37, 36);
     color: white;
+}
+
+.name-ao{
+    font-family: "Bokor", system-ui;
+    font-size: xx-large;
 }
 
 .left-bar-info{
@@ -73,8 +79,46 @@ body{
     position: absolute;
     top: 5px;
     right: 7px;
-    background: var(--color_main);
     padding: 5px;
     border-radius: 6px;
     cursor: pointer;
+}
+#information{
+    cursor: pointer;
+   
+
+}
+.tats{
+     border:none;
+     background-color:rgb(41, 37, 36);
+    width: 90%;
+   
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+@keyframes slideIn2 {
+    from {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    to {
+        transform: translateX(7%); /* End at the original position */
+    }
+}
+
+.mov {
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slideIn2 0.5s ease forwards;
 }
