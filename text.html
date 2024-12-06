@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  height: 100vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-scroll {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 2px;
+  height: 100%;
+  background: rgb(14 165 233);
+  position: absolute;
+  z-index: 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  border: solid 1px whitesmoke;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.icon.active {
+  transform: scale(1.2);
+  stroke: rgb(14 165 233);
+}
+
+.icon:not(.active) {
+
+}
+svg{
+    z-index: 100;
+}
+    </style>
+</head>
+<body><div class="custom-scroll">
+    <div class="line"></div>
+    <div class="icons">
+      <div class="icon-wrapper" data-section="section1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon active" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#939393" class="bi bi-person-bounding-box relative  top-1 mx-3 " viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              </svg>
+        </svg>
+      </div>
+      <div class="icon-wrapper" data-section="section2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 16 16">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#939393" class="bi bi-backpack4-fill  relative  top-1 mx-3" viewBox="0 0 16 16">
+                <path d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h4v.5a.5.5 0 0 0 1 0V7h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2m1 2a1 1 0 0 0-2 0zm-4 9v2h6v-2h-1v.5a.5.5 0 0 1-1 0V11z"/>
+                <path d="M14 7.599A3 3 0 0 1 12.5 8H9.415a1.5 1.5 0 0 1-2.83 0H3.5A3 3 0 0 1 2 7.599V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </svg>
+      </div>
+      <div class="icon-wrapper" data-section="section3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 16 16">
+         
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#939393" class="bi bi-code-slash relative  top-1 mx-3" viewBox="0 0 16 16">
+                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+              </svg>
+        </svg>
+      </div>
+      <div class="icon-wrapper" data-section="section4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 16 16">
+         
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#939393" class="bi bi-box relative  top-1 mx-3" viewBox="0 0 16 16">
+                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+              </svg>
+        </svg>
+      </div>
+      <div class="icon-wrapper" data-section="section5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 16 16">
+         
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#939393" class="bi bi-chat-right-quote-fill relative  top-1 mx-3" viewBox="0 0 16 16">
+                <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM7.194 4.766q.13.188.227.401c.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c.419-.416.672-.831.809-1.22-.269.165-.588.26-.93.26C4.775 7.333 4 6.587 4 5.667S4.776 4 5.734 4c.271 0 .528.06.756.166l.008.004c.169.07.327.182.469.324q.128.125.227.272M11 7.073c-.269.165-.588.26-.93.26-.958 0-1.735-.746-1.735-1.666S9.112 4 10.069 4c.271 0 .528.06.756.166l.008.004c.17.07.327.182.469.324q.128.125.227.272.131.188.228.401c.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c.42-.416.672-.831.81-1.22z"/>
+              </svg>
+        </svg>
+      </div>
+      <!-- Add more icons for additional sections -->
+    </div>
+  </div>
+  
+  <div id="section1" class="section">Section 1 Content</div>
+  <div id="section2" class="section">Section 2 Content</div>
+  <div id="section3" class="section">Section 3 Content</div>
+  <div id="section4" class="section">Section 3 Content</div>
+
+  <div id="section5" class="section">Section 3 Content</div>
+
+  
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section");
+  const icons = document.querySelectorAll(".icon-wrapper");
+
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    icons.forEach((icon) => {
+      const section = icon.getAttribute("data-section");
+      if (section === currentSection) {
+        icon.querySelector(".icon").classList.add("active");
+      } else {
+        icon.querySelector(".icon").classList.remove("active");
+      }
+    });
+  });
+
+  icons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      const section = document.getElementById(icon.getAttribute("data-section"));
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    });
+  });
+});
+
+    </script>
+</body>
+</html>
