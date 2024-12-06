@@ -122,3 +122,5 @@ body{
     transform: translateX(100%); /* Start off-screen to the right */
     animation: slideIn2 0.5s ease forwards;
 }
+
+
